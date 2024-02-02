@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Bodoni Moda', serif;
+    font-size: 1.2rem;
+}
+.container{
+     min-height: 100vh;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     gap: 20px;
+     background: linear-gradient(to right, #d6e8e9, #8bbfe2 );
+
+}
+.left-text{
+    flex-basis: 30%;
+}
+.gallery{
+    flex-basis: 50%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 120px;
+
+}
+.heading{
+    font-size: 3rem;
+    color: rgb(101, 101, 101);
+    text-align: center;
+}
+.subheading{
+    color: black;
+    margin-top: 10px;
+    text-align: center;
+}
+.box{
+    background-size: cover;
+    background-position: top;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #050505f2;
+    background-blend-mode:luminosity;
+    transition:all 1.5s ease-in-out;
+}
+.box:hover{
+ background-color: rgba(255, 255, 255, 0.131);
+ background-position:center;
+ box-shadow: 2px 2px 10px rgb(3, 3, 3);
+ font-size: 1.5rem;
+ cursor: pointer;
+}
+
+.row2{
+    grid-row: span 2;
+}
+.col2{
+    grid-column: span 2;
+}
+@media screen and (max-width: 1024px) {
+    .container{
+        flex-direction: column;
+        padding-block: 20px;
+
+    }
+    .gallery{
+        width: 100%;
+        height: 220px;
+
+    }
+    .box{
+        grid-row: span 1;
+        grid-column: span 3;
+    }
+}
